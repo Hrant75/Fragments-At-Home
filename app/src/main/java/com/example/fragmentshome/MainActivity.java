@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onDataPass(String data) {
         Fragment fr = fragmentManager.findFragmentByTag(TAG4);
-        if(fr != null) ((TextView)findViewById(R.id.fragment4_editableTextView)).setText(data);
+        if(fr != null  && (fr instanceof Fragment4))
+            ((TextView)findViewById(R.id.fragment4_editableTextView)).setText(data);
     }
 }

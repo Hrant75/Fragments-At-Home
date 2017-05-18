@@ -1,12 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment1">
 
     <TextView
+        android:id="@+id/fragment1_textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment 1" />
+        android:layout_height="wrap_content"
+        android:text="fragment 1"/>
 
-</FrameLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment1activity_tab_view_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/fragment1_textView"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_tab_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment1activity_tab_view_tablayout"/>
+
+</RelativeLayout>
